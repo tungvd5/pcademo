@@ -35,8 +35,47 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        // redirect to home page
-        $this->redirect(['/customer/index']);
+        return $this->render('index');
+    }
+
+    public function actionContact()
+    {
+        return $this->render('contact');
+    }
+
+    public function actionAbout()
+    {
+        return $this->render('aboutus');
+    }
+
+    public function actionError()
+    {
+        return $this->render('error');
+    }
+
+    public function actionList()
+    {
+        return $this->render('list');
+    }
+
+    public function actionSingle()
+    {
+        return $this->render('single');
+    }
+
+    public function actionBlog()
+    {
+        return $this->render('blog');
+    }
+
+    public function actionCheckout()
+    {
+        return $this->render('checkout');
+    }
+
+    public function actionBlogdetail()
+    {
+        return $this->render('blog_detail');
     }
 
     
