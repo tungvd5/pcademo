@@ -11,15 +11,13 @@ class Module extends \yii\base\Module
     public $layout = 'admin';
     public function init()
     {
-
-    	// initialize the module with the configuration loaded from config.php
-    	\Yii::configure($this, require(__DIR__ . '/config.php'));	
-
+        //$this->defaultRoute = 'dashboard';
+        // custom initialization code goes here
+        
 
         /* Make sure we run the master module init function */
         parent::init();
         
-        $this->defaultRoute = 'dashboard';
-        // custom initialization code goes here
+        
     }
 }
