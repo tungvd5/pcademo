@@ -6,7 +6,7 @@ use yii\web\Controller;
 
 class WidgetController extends Controller
 {
-    public $layout = 'lay-admin';
+    public $layout = 'admin';
     
     public function actionIndex()
     {
