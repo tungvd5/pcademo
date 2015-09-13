@@ -161,7 +161,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s;">
                         <div class="hotel-showcase">
                             <div class="post-media hoverentry">
-                                <img src="/themes/assets/customer/upload/hotel_showcase_01.png" alt="" class="img-responsive">
+                                <img src="<?= \Yii::getAlias('@asset') ?>/customer/upload/hotel_showcase_01.png" alt="" class="img-responsive">
                                 <div class="hoverbackground">
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
@@ -194,7 +194,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s;">
                         <div class="hotel-showcase">
                             <div class="post-media hoverentry">
-                                <img src="/themes/assets/customer/upload/hotel_showcase_02.png" alt="" class="img-responsive">
+                                <img src="<?= \Yii::getAlias('@asset') ?>/customer/upload/hotel_showcase_02.png" alt="" class="img-responsive">
                                 <div class="hoverbackground">
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
@@ -227,7 +227,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.6s;">
                         <div class="hotel-showcase">
                             <div class="post-media hoverentry">
-                                <img src="/themes/assets/customer/upload/hotel_showcase_03.png" alt="" class="img-responsive">
+                                <img src="<?= \Yii::getAlias('@asset') ?>/customer/upload/hotel_showcase_03.png" alt="" class="img-responsive">
                                 <div class="hoverbackground">
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
@@ -260,7 +260,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.8s;">
                         <div class="hotel-showcase">
                             <div class="post-media hoverentry">
-                                <img src="/themes/assets/customer/upload/hotel_showcase_04.png" alt="" class="img-responsive">
+                                <img src="<?= \Yii::getAlias('@asset') ?>/customer/upload/hotel_showcase_04.png" alt="" class="img-responsive">
                                 <div class="hoverbackground">
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
