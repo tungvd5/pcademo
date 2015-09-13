@@ -307,7 +307,7 @@
                         <li><a href="#"><i class="fa fa-dollar"></i>Earning</a></li>
                         <li><a href="#"><i class="fa fa-download"></i>Withdrawals</a></li>
                         <li class="divider"></li>
-                        <li><a href="<?= Yii::$app->getUrlManager()->createUrl('admin/page/signin') ?>"><i class="fa fa-sign-out"></i>Logout</a></li>
+                        <li><a href="<?= Yii::$app->getUrlManager()->createUrl('admin/user/logout') ?>"><i class="fa fa-sign-out"></i>Logout</a></li>
                     </ul>
                     <!--/ End dropdown menu -->
                 </li><!-- /.dropdown navbar-profile -->

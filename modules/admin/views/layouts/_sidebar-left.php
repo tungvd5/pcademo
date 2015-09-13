@@ -115,8 +115,8 @@
                 <li class="submenu">
                     <a href="javascript:void(0);">Account <span class="arrow"></span></a>
                     <ul>
-                        <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/page/signin') ?>">Sign In</a></li>
-                        <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/page/signintype2') ?>">Sign In Type 2</a></li>
+                        <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/user/login') ?>">Sign In</a></li>
+                        <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/user/logintype2') ?>">Sign In Type 2</a></li>
                         <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/page/signup') ?>">Sign Up</a></li>
                         <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/page/lostpassword') ?>">Lost password</a></li>
                         <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/page/lockscreen') ?>">Lock Screen</a></li>

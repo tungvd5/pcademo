@@ -43,7 +43,7 @@ $this->title = 'LOST PASSWORD | BLANKON - Fullpack Admin Theme';
     <!--/ Lost password form -->
 
     <!-- Content text -->
-    <p class="text-muted text-center sign-link">Back to <a href="<?= Yii::$app->getUrlManager()->createUrl('admin/page/signin') ?>"> Sign in</a></p>
+    <p class="text-muted text-center sign-link">Back to <a href="<?= Yii::$app->getUrlManager()->createUrl('admin/user/login') ?>"> Sign in</a></p>
     <!--/ Content text -->
 
 </div><!-- /#sign-wrapper -->
