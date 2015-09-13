@@ -6,7 +6,7 @@ use yii\web\Controller;
 
 class ChartController extends Controller
 {
-    public $layout = 'lay-admin';
+    public $layout = 'admin';
     
     public function actionIndex()
     {
