@@ -62,9 +62,12 @@ class UserController extends Controller
     public function actionRegister()
     {
         $model = new User();
+        if (isset($_POST['User'])) {
+            $model->attributes = $_POST['User'];
+            $model->role = User::ROLE_USER;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            if ($model->save()) 
+                return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -101,17 +104,18 @@ class UserController extends Controller
                 $model = User::find()->where(['id' => Yii::$app->user->id])->one();
                 $model->session_id = session_id();
                 $model->save();
+                Yii::$app->session->set('user.id',$model->id);
+                Yii::$app->session->set('user.username',$model->username);
+                Yii::$app->session->set('user.role',$model->role);
+
+                if($model->role == User::ROLE_ADMIN)
+                    return $this->redirect('/admin');
                 if (isset($_GET['redirect']))
                     return $this->redirect($_GET['redirect']);
 
                 return $this->redirect(Yii::$app->user->returnUrl);
             }
         }
-
-        if (isset($_GET['updated_license']))
-            Yii::$app->getSession()->setFlash('success', Yii::t('app', 'We will check your information inform to you soon!'));
-        if (isset($_GET['simultanceous']))
-            Yii::$app->getSession()->setFlash('error', Yii::t('app', 'Your account logged in from another place. Please login again').' !');
         return $this->render('login', ['model' => $model]);
     }
     /**
@@ -160,5 +164,16 @@ class UserController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionLogout()
+    {
+        Yii::$app->user->logout();
+        Yii::$app->session->destroy();
+        $this->redirect('/');
+    }
+
+    public function actionLostpassword(){
+        return $this->render('lostpassword');
     }
 }

@@ -39,7 +39,11 @@
                     <li><a href="<?php echo Url::toRoute('/site/contact'); ?>">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?php echo Url::toRoute('/user/login'); ?>"><i class="fa fa-key"></i>Login</a></li>
+                    <?php if(!Yii::$app->session->get('user.id')){ ?>
+                        <li><a href="<?php echo Url::toRoute('/user/login'); ?>"><i class="fa fa-key"></i>Login</a></li>
+                    <?php }else{?>
+                        <li><a href="<?php echo Url::toRoute('/customer/user/logout'); ?>"><i class="fa fa-key"></i>Logout</a></li>
+                    <?php } ?>
                     <li><a href="<?php echo Url::toRoute('/customer/user/register'); ?>"><i class="fa fa-user"></i>Register</a></li>   
                     <li><a href="<?php echo Url::toRoute('/user/login'); ?>"><i class="fa fa-globe"></i> English</a></li>    
                     <li>
