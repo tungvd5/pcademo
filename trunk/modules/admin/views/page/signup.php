@@ -17,7 +17,7 @@ $this->title = 'SIGN UP | BLANKON - Fullpack Admin Theme';
             <!--/ Brand -->
 
             <!-- Register form -->
-            <form class="form-horizontal rounded shadow no-overflow" action="<?= Yii::$app->getUrlManager()->createUrl('admin/page/signin') ?>">
+            <form class="form-horizontal rounded shadow no-overflow" action="<?= Yii::$app->getUrlManager()->createUrl('admin/user/login') ?>">
                 <div class="sign-header">
                     <div class="form-group">
                         <div class="sign-text">
@@ -75,7 +75,7 @@ $this->title = 'SIGN UP | BLANKON - Fullpack Admin Theme';
             <!--/ Register form -->
 
             <!-- Content text -->
-            <p class="text-muted text-center sign-link">Already have an account? <a href="<?= Yii::$app->getUrlManager()->createUrl('admin/page/signin') ?>"> Sign in here</a></p>
+            <p class="text-muted text-center sign-link">Already have an account? <a href="<?= Yii::$app->getUrlManager()->createUrl('admin/user/login') ?>"> Sign in here</a></p>
             <!--/ Content text -->
 
         </div><!-- /#sign-wrapper -->

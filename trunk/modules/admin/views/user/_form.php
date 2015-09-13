@@ -8,25 +8,18 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="user-form">
+<div class="row">
+    <div class="col-md-10 pull-right">
 
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'id')->textInput() ?>
 
-    <?= $form->field($model, 'role')->textInput() ?>
-
     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'passwordreset')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'gender')->textInput() ?>
-
-    <?= $form->field($model, 'position')->textInput() ?>
 
     <?= $form->field($model, 'first_name')->textInput(['maxlength' => true]) ?>
 
@@ -40,17 +33,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fax')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'created')->textInput() ?>
-
-    <?= $form->field($model, 'updated')->textInput() ?>
-
     <?= $form->field($model, 'picture')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'status')->textInput() ?>
-
-    <?= $form->field($model, 'verify_code')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'session_id')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'zip')->textInput(['maxlength' => true]) ?>
 
@@ -58,16 +41,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'address')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'country_id')->textInput() ?>
-
     <?= $form->field($model, 'website')->textInput(['maxlength' => true]) ?>
-    
-    <?= $form->field($model, 'mail_userid')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
-
+    </div>
 </div>

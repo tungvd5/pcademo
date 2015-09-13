@@ -1,3 +1,12 @@
+
+<?php
+
+use app\assets\admin\dashboard\DashboardAsset;
+
+DashboardAsset::register($this);
+
+$this->title = "CRAZY GUY";
+?>
 <?php
 
 use yii\helpers\Html;
@@ -9,8 +18,8 @@ use yii\grid\GridView;
 $this->title = Yii::t('app', 'Users');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="user-index">
-
+<div class="row">
+    <div class="col-md-10 pull-right">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
@@ -25,14 +34,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'role',
             'username',
-            'password',
             'email:email',
             // 'passwordreset',
             // 'gender',
             // 'position',
             // 'first_name',
-            // 'last_name',
-            // 'birthday',
+            'last_name',
+            'birthday',
             // 'phone',
             // 'mobile',
             // 'fax',
@@ -40,29 +48,17 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'updated',
             // 'picture',
             // 'status',
-            // 'fastbill_customer_id',
-            // 'fastbill_dashboard_url:url',
             // 'verify_code',
             // 'session_id',
-            // 'description:ntext',
-            // 'specialisation:ntext',
-            // 'ftp_password',
-            // 'ftp_path',
             // 'zip',
             // 'city',
             // 'address:ntext',
             // 'country_id',
             // 'website',
-            // 'company_id',
             // 'mail_userid',
-            // 'package_id',
-            // 'trial_expire',
-            // 'payment_status',
-            // 'business_license',
-            // 'admin_approved',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+    </div>
 </div>

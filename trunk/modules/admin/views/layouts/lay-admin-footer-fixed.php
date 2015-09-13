@@ -25,7 +25,7 @@
         <link href="<?= \Yii::getAlias('@asset') ?>/img/ico/yii/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
         <link href="<?= \Yii::getAlias('@asset') ?>/img/ico/yii/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
         <link href="<?= \Yii::getAlias('@asset') ?>/img/ico/yii/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
-        <link href="<?= \Yii::getAlias('@asset') ?>/img/ico/yii/apple-touch-icon.png" rel="shortcut icon">
+        <link href="<?= \Yii::getAlias('@asset') ?>/admin/images/apple-touch-icon.png" rel="shortcut icon">
         <!-- END FAVICONS -->
 
         <!-- START @FONT STYLES -->
