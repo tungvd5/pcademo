@@ -1,8 +1,9 @@
 <?php 
 return [
+        '/'=>'customer/index/index',
         '/admin'=>'admin/dashboard/index',
         '/customer'=>'customer/index',
-        '/user'=>'customer/user',
+        '/user/login'=>'customer/user/login',
         '/site/about'=>'/customer/site/about',
         '/site/contact'=>'/customer/site/contact',
         '/site/error'=>'/customer/site/error',

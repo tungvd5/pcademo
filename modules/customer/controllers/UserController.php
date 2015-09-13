@@ -31,7 +31,7 @@ class UserController extends Controller
      * Lists all User models.
      * @return mixed
      */
-    public function actionIndex()
+    /*public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
             'query' => User::find(),
@@ -67,7 +67,7 @@ class UserController extends Controller
             $model->role = User::ROLE_USER;
 
             if ($model->save()) 
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['completedregister', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -175,5 +175,11 @@ class UserController extends Controller
 
     public function actionLostpassword(){
         return $this->render('lostpassword');
+    }
+
+    public function actionCompletedregister($id){
+        return $this->render('completed_register', [
+            'model' => $this->findModel($id),
+        ]);
     }
 }

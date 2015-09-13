@@ -171,4 +171,6 @@ class UserController extends Controller
         Yii::$app->session->destroy();
         $this->redirect('/');
     }
+
+    public function action
 }
