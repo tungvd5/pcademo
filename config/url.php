@@ -12,6 +12,7 @@ return [
         '/site/blog'=>'/customer/site/blog',
         '/site/checkout'=>'/customer/site/checkout',
         '/site/blogdetail'=>'/customer/site/blogdetail',
+        '/site/createproject'=>'/customer/site/createproject',
         /*'<controller:\w+>/<id:\d+>' => '<controller>/view',
         '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
         '<controller:\w+>/<action:\w+>' => '<controller>/<action>',

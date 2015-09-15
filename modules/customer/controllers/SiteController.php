@@ -48,6 +48,11 @@ class SiteController extends Controller
         return $this->render('aboutus');
     }
 
+    public function actionCreateproject()
+    {
+        return $this->render('createproject');
+    }
+
     public function actionError()
     {
         return $this->render('error');
