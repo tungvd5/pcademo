@@ -36,6 +36,24 @@
         </li>
         <!--/ End category apps -->
 
+        <!-- Start navigation - User -->
+        <li class="submenu <?= (Yii::$app->controller->id == 'user') ? 'active' : '' ?>">
+            <a href="javascript:void(0);">
+                <span class="icon"><i class="fa fa-globe"></i></span>
+                <span class="text">User</span>
+                <span class="arrow"></span>
+                <?= (Yii::$app->controller->id == 'user') ? '<span class="selected"></span>' : '' ?>
+            </a>
+            <ul>
+                <li class="<?= (Yii::$app->controller->action->id == 'index') ? 'active' : '' ?>">
+                    <a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/user/index') ?>">List</a>
+                </li>
+                <li class="<?= (Yii::$app->controller->action->id == 'create') ? 'active' : '' ?>">
+                    <a href="<?= Yii::$app->getUrlManager()->createUrl('/admin/user/create') ?>">Create</a>
+                </li>
+            </ul>
+        </li>
+
         <!-- Start navigation - blog -->
         <li class="submenu <?= (Yii::$app->controller->id == 'blog') ? 'active' : '' ?>">
             <a href="javascript:void(0);">

@@ -35,17 +35,22 @@
                         </ul>
                     </li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="<?php echo Url::toRoute('/site/about'); ?>">About us</a></li>
-                    <li><a href="<?php echo Url::toRoute('/site/contact'); ?>">Contact</a></li>
+                    <li><a href="<?php echo Url::toRoute('/site/about'); ?>"><?php echo Yii::t('app', 'About us') ?></a></li>
+                    <li><a href="<?php echo Url::toRoute('/site/contact'); ?>"><?php echo Yii::t('app', 'Contact') ?></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if(!Yii::$app->session->get('user.id')){ ?>
-                        <li><a href="<?php echo Url::toRoute('/user/login'); ?>"><i class="fa fa-key"></i>Login</a></li>
+                        <li><a href="<?php echo Url::toRoute('/user/login'); ?>"><i class="fa fa-key"></i><?php echo Yii::t('app', 'Login') ?></a></li>
                     <?php }else{?>
-                        <li><a href="<?php echo Url::toRoute('/customer/user/logout'); ?>"><i class="fa fa-key"></i>Logout</a></li>
+                        <li><a href="<?php echo Url::toRoute('/customer/user/logout'); ?>"><i class="fa fa-key"></i><?php echo Yii::t('app', 'Logout') ?></a></li>
+                        <li><a href="<?php echo Url::toRoute('/customer/project'); ?>"><i class="fa fa-key"></i><?php echo Yii::t('app', 'My Project') ?></a></li>
                     <?php } ?>
-                    <li><a href="<?php echo Url::toRoute('/customer/user/register'); ?>"><i class="fa fa-user"></i>Register</a></li>   
-                    <li><a href="<?php echo Url::toRoute('/user/login'); ?>"><i class="fa fa-globe"></i> English</a></li>    
+                    <li><a href="<?php echo Url::toRoute('/customer/user/register'); ?>"><i class="fa fa-user"></i><?php echo Yii::t('app', 'Register') ?></a></li>   
+                    <?php if(!Yii::$app->session->get('user.id')){ ?>
+                        <li><a href="<?php echo Url::toRoute('/customer/user/profile'); ?>"><i class="fa fa-globe"></i><?php echo Yii::t('app', 'English') ?></a></li>    
+                    <?php }else{?>
+                        <li><a href="<?php echo Url::toRoute('/customer/user/profile'); ?>"><i class="fa fa-globe"></i><?php echo Yii::t('app', 'Account') ?></a></li>
+                    <?php } ?>
                     <li>
                         <span class="social">
                             <a href="#"><i class="fa fa-facebook"></i></a>

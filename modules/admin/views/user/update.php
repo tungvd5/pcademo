@@ -1,4 +1,7 @@
 <?php
+use app\assets\admin\dashboard\DashboardAsset;
+
+DashboardAsset::register($this);
 
 use yii\helpers\Html;
 

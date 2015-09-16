@@ -172,4 +172,19 @@ class UserController extends Controller
         $this->redirect('/');
     }
 
+    public function actionCreate()
+    {
+        $model = new User();
+        if (isset($_POST['User'])) {
+            $model->attributes = $_POST['User'];
+            $model->role = User::ROLE_USER;
+
+            if ($model->save()) 
+                return $this->redirect(['completedregister', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+    }
 }
