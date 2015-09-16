@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+
 /**
  * UserController implements the CRUD actions for User model.
  */
@@ -26,6 +27,7 @@ class UserController extends Controller
             ],
         ];
     }
+
 
     /**
      * Lists all User models.
@@ -75,13 +77,16 @@ class UserController extends Controller
         }
     }
 
-    public function actionChangePassword(){
-        $model = new User();
+    public function actionChangepassword(){
+        if(!Yii::$app->session->get('user.id'))
+            return $this->redirect('/customer/user/login');
+
+        $model = $this->findModel(Yii::$app->session->get('user.id'));
         
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
-            return $this->render('create', [
+            return $this->render('changepass', [
                 'model' => $model,
             ]);
         }
@@ -180,6 +185,14 @@ class UserController extends Controller
     public function actionCompletedregister($id){
         return $this->render('completed_register', [
             'model' => $this->findModel($id),
+        ]);
+    }
+
+    public function actionProfile(){
+        if(!Yii::$app->session->get('user.id'))
+            return $this->redirect('/customer/user/login');
+        return $this->render('profile', [
+            'model' => $this->findModel(Yii::$app->session->get('user.id')),
         ]);
     }
 }

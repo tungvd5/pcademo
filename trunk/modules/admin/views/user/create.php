@@ -1,8 +1,8 @@
 <?php
-    use yii\helpers\Html;
-?>
-<?php
+use app\assets\admin\dashboard\DashboardAsset;
 
+DashboardAsset::register($this);
+    use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\User */
@@ -11,21 +11,7 @@ $this->title = Yii::t('app', 'Create User');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section class="pagebg banner">
-    <div class="page-header-top"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Login <strong>Account</strong></h1>
-                <h4>Top hotel in the world</h4>
-                <ol class="breadcrumb">
-                  <li><a href="#">Home</a></li>
-                  <li class="active">Login</li>
-                </ol>
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section>
+
 <section class="section white">
     <div class="pagebefore"></div>
     <div class="container">
@@ -39,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div><!-- end row -->
         
         <div id="sitewrapper" class="row">
-            <div id="content" class="col-md-12 col-sm-12 col-xs-12">
+            <div id="content" class="col-md-10 pull-right">
 
                 <div class="row">
                     <div class="col-md-5 col-sm-6">

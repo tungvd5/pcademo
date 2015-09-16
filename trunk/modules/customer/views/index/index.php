@@ -243,8 +243,8 @@
                                     <a class="detailhover3" href="#">Booking</a>
                                     </div>
                                 </div><!-- end hoverbackground -->
-                            </div><!-- end media -->
-                            <div class="hotel-showcase-title text-center">
+                            <div class="hotel-showcase-title text-center">                            </div><!-- end media -->
+
                                 <div class="rating">
                                     <i class="fa fa-star-o"></i>
                                     <i class="fa fa-star-o"></i>
