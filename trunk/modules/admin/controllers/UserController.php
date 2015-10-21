@@ -187,4 +187,10 @@ class UserController extends Controller
             ]);
         }
     }
+
+    public function actionCompletedregister($id){
+        return $this->render('completed_register', [
+            'model' => $this->findModel($id),
+        ]);
+    }
 }
